@@ -1,0 +1,19 @@
+{
+  "name": "myHybridBridge",
+  "version": "0.0.1",
+  "description": "Your Plugin Description",
+  "cordova": {
+    "id": "cordova-plugin-kermitsdk",
+    "platforms": [ 
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "camera",
+    "ecosystem:cordova",
+    "cordova-ios",
+  ],
+  "author": "RaviD",
+  "license": "MIT"
+}

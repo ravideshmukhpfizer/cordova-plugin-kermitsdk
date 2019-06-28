@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-kermitsdk" version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>MyHybridBridge</name>
+    
+    <js-module name="MyHybridBridge" src="www/MyHybridBridge.js">
+        <clobbers target="MyHybridBridge" />
+    </js-module>
+    
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            
+            <feature name="MyHybridBridge">
+                <param name="ios-package" value="MyHybridBridge" />
+            </feature>
+            
+        </config-file>
+        
+        <!-- Add in the plugin .swift files here -->
+        <source-file src="src/ios/MyHybridBridge.swift" />
+        
+        <!-- Add in the swift-support plugin by default -->
+        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+    </platform>
+</plugin>
+
+
+
+import { Injectable } from '@angular/core';
+import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
+@Plugin({
+pluginName: 'kermitsdk',
+plugin: 'cordova-plugin-kermitsdk',
+pluginRef: 'kermitsdk',
+repo:
+'https://github.com/ravideshmukhpfizer/cordova-plugin-kermitsdk',
+platforms: ['iOS']
+})
+@Injectable()
+export class MyHybridBridge extends IonicNativePlugin {
+/**
+* Your plugin plugin functions go here.
+* Function names should match the ones in your .swift & .js files.
+* Otherwise you won't be able to execute them.
+*/
+@Cordova({
+successIndex: 0,
+errorIndex: 1
+})
+yourFunctionName(): Promise<any> {
+return;
+}
+}
