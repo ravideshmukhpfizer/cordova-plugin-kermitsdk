@@ -23,31 +23,3 @@
         <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
     </platform>
 </plugin>
-
-
-
-import { Injectable } from '@angular/core';
-import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
-@Plugin({
-pluginName: 'kermitsdk',
-plugin: 'cordova-plugin-kermitsdk',
-pluginRef: 'kermitsdk',
-repo:
-'https://github.com/ravideshmukhpfizer/cordova-plugin-kermitsdk',
-platforms: ['iOS']
-})
-@Injectable()
-export class MyHybridBridge extends IonicNativePlugin {
-/**
-* Your plugin plugin functions go here.
-* Function names should match the ones in your .swift & .js files.
-* Otherwise you won't be able to execute them.
-*/
-@Cordova({
-successIndex: 0,
-errorIndex: 1
-})
-yourFunctionName(): Promise<any> {
-return;
-}
-}
