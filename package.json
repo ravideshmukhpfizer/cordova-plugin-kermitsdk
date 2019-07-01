@@ -1,5 +1,5 @@
 {
-  "name": "myHybridBridge",
+  "name": "kermitsdk-myhybridbridge",  
   "version": "0.0.1",
   "description": "Your Plugin Description",
   "cordova": {
@@ -12,7 +12,7 @@
     "cordova",
     "camera",
     "ecosystem:cordova",
-    "cordova-ios",
+    "cordova-ios"
   ],
   "author": "RaviD",
   "license": "MIT"
